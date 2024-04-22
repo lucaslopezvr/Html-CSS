@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens que se adaptam sozinhas</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+
+    <p>
+        Tenta abrir este site em vários dispositivos diferentes 
+        ou simplesmente aumente e diminua o tamanho do seu navegador
+    </p>
+
+    <p>
+        Usamos a tag "source media type" para fazer com que site entender que <br>
+        se a tela/janela do usuário for pequena em vez de usar a imagem G usar a M. <br>
+        Você pode testar isso aumentando e diminuindo a janela do navegador
+    </p>
+    <picture>
+        <source media="(max-width:750px )"  srcset="imagens/foto-p.png" type="image/png"> <!-- Obrigatóriamente o menor tem que vir primeiro-->
+        <source media="(max-width:1050px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <h2>Naeleck - Burning Wish (feat. Roniit) | Slap House | NCS - Copyright Free Music</h2>
+    <audio src="media/naeleck-burningwish.mp3" controls autoplay loop></audio> <!-- Para aparecer os controles do áudio usar "controls" e para tocar usar "autoplay"-->
+    <!-- loop quando acabar de reproduzir, começa denovo.-->
+    <h3>Para ter compatibilidade com diversos navegadores usar MP3, WAV e OGG</h3>
+
+    <h2>Inserindo áudio de outra maneira</h2>
+    <audio preload="metadata" controls autoplay>
+        <source src="media/guanacast-33.mp3" type="audio/mpeg">
+        <source src="media/guanacast-33.wav" type="audio/wav">
+        <source src="media/guanacast-33.ogg" type="audio/ogg">
+        <p>
+            Infelizmente seu navegador não consegue reproduzir áudio
+            <a href="media/guanacast-33.mp3">Clique aqui para baixar o arquivo MP3</a>
+        </p>
+    </audio>
+
+    
+</body>
+</html>
